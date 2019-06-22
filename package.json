@@ -21,5 +21,8 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "unsplash-js": "^5.0.0"
   }
 }
