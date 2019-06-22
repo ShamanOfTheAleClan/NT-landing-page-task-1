@@ -55,6 +55,6 @@ window.onload=function() {
     
     let images = document.querySelectorAll('.news-item');
     for (i=0; i < images.length; i++) {
-        images[i]
+        images[i].style.backgroundImage = 'url("'+imgUrlArray[i]+'")';
     }
 };
