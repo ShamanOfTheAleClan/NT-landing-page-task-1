@@ -1,0 +1,9 @@
+article:nth-of-type(2) {
+    table {
+        tr {
+            td:nth-of-type(6), th:nth-of-type(6) {
+                display: none;
+            }
+        }
+    }
+}

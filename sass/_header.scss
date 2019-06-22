@@ -1,13 +1,22 @@
 header {
     background-color: #FFFFFF;
-    color: $gray-blue;
+    color: $grayBlue;
     position: fixed;
+    top:0;
     left: 0;
     width: 100%;
+    z-index: 2;
     .nav-wrap {
         @include flexRowBetween;
         width: 100%;
+        height: 71px;
+        padding: 21px 20px;
+        box-sizing: border-box;
+        box-shadow: 0 10px 10px rgba(68, 71, 124, 0.02);
+
         span {
+            z-index:2;
+            font-size: 22px;
             font-family: 'QuicksandBold';
         }
     }
@@ -15,10 +24,10 @@ header {
         z-index: 1;
         transform: translateX(-160px);
         position: absolute;
-        background-color: $background-white;
+        background-color: $backgroundWhite;
         left: 0;
         top: 0;
-        height: 100vh;
+        height: 105vh;
         width: 160px;
         transition: 0.5s ease-in-out;
         ul {
@@ -31,7 +40,7 @@ header {
                 position: relative;
                 a {
                     @include flexCenter;
-                    color: $gray-blue;
+                    color: $grayBlue;
                     text-decoration: none; 
                     width: 100%;
                     height: 100%;
@@ -64,7 +73,7 @@ header {
             position: absolute;
             height: 5px;
             width: 100%;
-            background: $gray-blue;
+            background: $grayBlue;
             border-radius: 9px;
             opacity: 1;
             left: 0;
