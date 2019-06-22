@@ -1,0 +1,100 @@
+header {
+    background-color: #FFFFFF;
+    color: $gray-blue;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    .nav-wrap {
+        @include flexRowBetween;
+        width: 100%;
+        span {
+            font-family: 'QuicksandBold';
+        }
+    }
+    .menu-wrap {
+        z-index: 1;
+        transform: translateX(-160px);
+        position: absolute;
+        background-color: $background-white;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 160px;
+        transition: 0.5s ease-in-out;
+        ul {
+            padding-top: 90px;
+            li {
+                font-family: 'MontserratMedium';
+                list-style-type: none;
+                font-size: 18px;
+                height: 52px;
+                position: relative;
+                a {
+                    @include flexCenter;
+                    color: $gray-blue;
+                    text-decoration: none; 
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        ul:hover li {
+            opacity: 0.69;
+        }
+        ul li:hover {
+            opacity: 1;
+        }
+    }
+    .translated {
+        transform: translateX(0px);
+    }
+
+    .burger {
+        box-sizing: border-box;
+        @include flexCenter;
+        #burger {
+            width: 45px;
+            height: 40px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+        }
+        #burger span {
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            background: $gray-blue;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        #burger span:nth-child(1) {
+            top: 0px;
+        }
+        #burger span:nth-child(2),#burger span:nth-child(3) {
+            top: 17px;
+        }
+        #burger span:nth-child(4) {
+            top: 34px;
+        }
+        #burger.active span:nth-child(1) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+        #burger.active span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        #burger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+        #burger.active span:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+    }
+}

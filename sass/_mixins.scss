@@ -1,0 +1,51 @@
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexRowBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin line($property) {
+    border-top: 2px solid $property;
+}
+@keyframes menuHover {
+    50% {
+        width: 100%;
+        left:0;   
+        }
+    100% {
+        left: 0;
+        width: 3px;
+    }
+}
+@font-face {
+    font-family: "MontserratMedium";
+    src: url('assetsMontserrat-Medium.woff2') format('woff2'),
+        url('assets/Montserrat-Medium.woff') format('woff'),
+        url('assets/Montserrat-Medium.ttf') format('truetype'),
+}
+@font-face {
+    font-family: 'MontserratSemiBold';
+    src: url('assets/Montserrat-SemiBold.woff2') format('woff2'),
+        url('assets/Montserrat-SemiBold.woff') format('woff'),
+        url('assets/Montserrat-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "QuicksandBold";
+    src: url('assets/Quicksand-Bold.woff2') format('woff2'),
+        url('assets/Quicksand-Bold.woff') format('woff'),
+        url('assets/Quicksand-Bold.ttf') format('truetype');
+}
