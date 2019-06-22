@@ -81,41 +81,44 @@
                     </div>
                 </div>
             </div>
-        </article> <!-- add swiper-->
+
+        </article>
         
         <article class="pasiulymai">
 
+            <!-- <div class="background-rectangle"></div> -->
             <!--su js padaryt, kad paspaudus ant menu ir paspaudus bet kur kitur vietoj pasirinkimo, grįžta default reikšmė-->
-            <select name="plotas">
-                <option selected disabled hidden value="default">Plotas</option>
-                <option value="didejimo">Didėjimo tvarka</option>
-                <option value="mazejimo">Mažėjimo tvarka</option>
-            </select>
+             
+                <select name="plotas">
+                    <option selected disabled hidden value="default">Plotas</option>
+                    <option value="didejimo">Nuo mažiausio</option>
+                    <option value="mazejimo">Nuo didžiausio</option>
+                </select>
 
-            <select name="kambariu-skaicius">
-                <option selected disabled hidden value="default">Kambarių skaičius</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option> 
-            </select>
+                <select name="kambariu-skaicius">
+                    <option selected disabled hidden value="default">Kambarių skaičius</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option> 
+                </select>
 
-            <select name="langu-orientacija"> 
-                <option selected disabled hidden value="default">Langų orientacija</option>
-                <option value="siaure">Šiaurė</option>
-                <option value="rytai">Rytai</option>
-                <option value="pietus">Pietūs</option>
-                <option value="vakarai">Vakarai</option>
-            </select>
+                <select name="langu-orientacija"> 
+                    <option selected disabled hidden value="default">Langų orientacija</option>
+                    <option value="siaure">Šiaurė</option>
+                    <option value="rytai">Rytai</option>
+                    <option value="pietus">Pietūs</option>
+                    <option value="vakarai">Vakarai</option>
+                </select>
 
-            <select name="baigtumas">
-                <option selected disabled hidden  value="default">Baigtumas</option>
-                <option value="statoma">Statoma</option> 
-                <option value="pastatyta">Pastatyta</option>
-            </select>
+                <select name="baigtumas">
+                    <option selected disabled hidden  value="default">Baigtumas</option>
+                    <option value="statoma">Statoma</option> 
+                    <option value="pastatyta">Pastatyta</option>
+                </select>
 
              
-            <table>
+            <table>  
                 <tr>
                     <th>Nuolaida</th>
                     <th>Namo nr.</th>
@@ -288,13 +291,10 @@
     <script src="swiper.min.js"></script>
     <script>
         let swiper1 = new Swiper('.swiper1', {
-            autoHeight: false,
-            // direction: 'horizontal',
             centeredSlides: true,
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            // width: 320,
 
         });
     </script>

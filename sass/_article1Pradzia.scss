@@ -3,7 +3,7 @@ article:nth-of-type(1) {
     background-image: linear-gradient(219deg,#E8F1FF 0%, #FAFCFF 100%);
     padding: 45px 0 0 0;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     
     h1 {
         font-family: 'QuicksandBold';
@@ -11,13 +11,13 @@ article:nth-of-type(1) {
         color: $grayBlue;
         padding: 0 10px;
         margin-top: 45px;
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
         position: relative;
     }
     .background-rectangle {
         background-color: $backgroundWhite;
         height: 100%;
-        width: 898px;
+        width: calc(100vw - 100px);
         border-radius: 344px 0 0 0;
         position: absolute;
         top: 118px;

@@ -1,5 +1,3 @@
-// window.onload=function(){
-
 // burger animation
 
 let burger = document.getElementById("burger");
@@ -16,7 +14,14 @@ function burgerClick()  {
         }
     }
 burger.addEventListener('click', burgerClick) ;
-// }
 
 // https://css-tricks.com/form-validation-part-2-constraint-validation-api-javascript/
 
+let rows = document.querySelectorAll('tr');
+
+
+for (i=1; i < rows.length; i++) {
+    if (rows[i].querySelector("td").innerHTML !== "-") {
+        rows[i].classList.add("discount")
+    }
+}
