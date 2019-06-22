@@ -1,0 +1,127 @@
+article:nth-of-type(4){
+    box-shadow: 0 10px 50px rgba(68, 71, 124, 0.15);
+    border-radius: 7px;
+    margin-bottom: 42px;
+    .contacts{
+        background-color: $blueLight;
+        width: 100%;
+        padding: 110px 20px 110px 20px;
+        box-sizing: border-box;
+        @include flexColumn;
+        // .background-triangle {
+        //     width: 0;
+        //     height: 0;
+        //     border-bottom: 50px solid $backgroundWhite;
+        //     border-left: 772px solid transparent;
+        // }
+        .contact-single {
+            @include flexRow;
+            align-items: center;
+            margin-bottom: 40px;
+            .contact-photo {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                margin-right: 20px;
+                background-position: center;
+                background-size: cover;
+            }
+            .contact-info {
+                @include flexColumn;
+                align-items: flex-start;
+                span:nth-of-type(1){
+                    font-family: "QuicksandBold";
+                    font-size: 20px;
+                    color: $blueDark;
+                }
+                span:nth-of-type(2), span:nth-of-type(3){
+                    font-family: "MontserratMedium";
+                    font-size: 14px;
+                    color: $grayBlueLight;
+                }
+            }
+        }
+        .contact-single:nth-of-type(2) .contact-photo{
+            background-image: url("assets/stefan-stefancik-1203044-unsplash (1).png");
+            background-position-y: -5px;
+        }
+        .contact-single:nth-of-type(3) .contact-photo{
+            background-image: url("assets/dan-1147269-unsplash.png");
+        }
+        .contact-single:nth-of-type(4) .contact-photo{
+            background-image: url("assets/natashia-shukla-1411995-unsplash.png");
+        }
+    }
+    .form-wrap {
+        padding: 50px 20px 0 20px;
+        box-shadow: 0 10px 50px rgba(68, 71, 124, 0.15);
+        h1 {
+            font-family: "QuicksandBold";
+            font-size: 42px;
+            color: $blueDark;
+            margin-bottom: 40px;
+        }
+        form {
+            fieldset {
+                border: none;
+                input {
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid $gray;
+                    font-family: 'MontserratMedium';
+                    font-size: 16px;
+                    color: $grayBlueLight;
+                    margin-bottom: 30px;
+                    padding: 4px;
+                    
+                }
+                #terms-checkmark {
+                    display: none;
+                }
+                label {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: top;
+                    .checkbox {
+                        width: 28px;
+                        height: 28px;
+                        border: 1px solid $blueDark;
+                        flex-shrink:0;
+                        margin-right: 19px;
+                    }
+                }
+                
+                span {
+                    font-family: 'MontserratMedium';
+                    font-size: 14px;
+                    color: $grayBlueLight;
+                    a {
+                        color: $grayBlueLight;
+                    }
+                }
+                input[type=submit] {
+                    width: 200px;
+                    height: 60px;
+                    border-radius: 30px;
+                    background-color: $grayBlue;
+                    padding: 18px 100px 18px 46px;
+                    box-sizing: border-box;
+                    align-self: center;
+                    @include flexRow;
+                    margin: 32px auto;
+                    color: $backgroundWhite;
+                }
+                .button-wrap {
+                    position: relative;
+                    svg {
+                        position: absolute;
+                        right: 85px;
+                        top:18px;
+                    }  
+                }
+
+            }
+            
+        }
+    }
+}
