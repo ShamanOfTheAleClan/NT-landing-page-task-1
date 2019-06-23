@@ -53,8 +53,13 @@ window.onload=function() {
 	http.open("GET", url);
     http.send();
     
-    let images = document.querySelectorAll('.news-item');
-    for (i=0; i < images.length; i++) {
-        images[i].style.backgroundImage = 'url("'+imgUrlArray[i]+'")';
-    }
 };
+let images = document.querySelectorAll('.news-item');
+
+http.onload = function () {
+
+    for (i=0; i < images.length; i++) {
+        let cssUrl = imgUrlArray[i];
+        images[i].style.backgroundImage = 'url("'+cssUrl+'")';
+    }
+}
