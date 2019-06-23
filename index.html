@@ -93,6 +93,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
         </article>
@@ -354,7 +356,21 @@
             slidesPerView: 1,
             loop: false,
             spaceBetween: 30,
-
+            // effect: fade,
+            // fadeEffect: {
+            //     crossFade: true
+            // },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpointsInverse: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween:25,
+                }
+            }
         });
     </script>
 </body>

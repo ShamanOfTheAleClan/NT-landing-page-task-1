@@ -12,3 +12,161 @@
         
     }
 }
+@media (min-width: 425px) {
+    article:nth-of-type(2) {
+        .table-wrap {
+            table {
+                th {
+                    padding: 52px 10px;
+                }
+                tr {
+                    td:first-of-type, th:first-of-type {
+                        padding-left: 20px;
+                    }
+                    td:last-of-type, th:last-of-type {
+                        padding-right: 20px;
+                    }
+                    td:nth-of-type(5), th:nth-of-type(5) {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        .burger {
+            display: none;
+        }
+        .nav-wrap{
+            padding: 21px 30px;
+        }
+        .menu-wrap {
+            position: static;
+            transform: none;
+            height: 100%;
+            width: 430px;
+            display: flex;
+            align-items: center;
+            transition: none;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: 0px;
+                width: 100%;
+                height: 100%;
+                li {
+                    padding: 0;
+                    border-left: none;
+                    font-size: 18px;
+                    height: calc(100% - 2px);
+                    @include flexCenter;
+                    transition: 0.2s ease-in-out;
+                    border-bottom: 2px solid $blueDark;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 4px;
+                        background-color: $backgroundWhite;
+                        width: 50%;
+                        left: 0;
+                        bottom: -3px;
+                        transition: 0.3s ease-in-out;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 4px;
+                        background-color: $backgroundWhite;
+                        width: 51%;
+                        left: 50%;
+                        bottom: -3px;
+                        transition: 0.3s ease-in-out;
+                    } 
+                    a {
+                        // padding: 0 22px;
+                    }
+                }
+                li:hover{
+                    border-left: none;
+                    padding-left: 0;
+                    height: calc(100% - 2px);
+                    &::after {
+                        transform:translateX(100%);
+                    }
+                    &::before {
+                        transform: translateX(-100%);
+                    }
+                    a {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+    article:nth-of-type(1) {
+        .item-wrap {
+            width: 348px;
+            height: 608px;
+            .image {
+                height: 349px;
+            }
+            .text {
+                h2 {
+                    font-size: 26px;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+            .read-more-arrow {
+                bottom:26px;
+            }
+        }
+    }
+    article:nth-of-type(2) {
+        .table-wrap {
+            max-width: 1268px;
+            width: 95%;
+            table {
+                width: 100%;
+                td, th {
+                    font-size: 20px;
+                }
+                tr {
+                    td:nth-of-type(6), th:nth-of-type(6) {
+                        display: table-cell;
+                    }
+                    td:nth-of-type(5), th:nth-of-type(5) {
+                        padding-right: 10px;
+                    }
+                }
+            }
+            .select-wrap {
+                font-size: 20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .custom-select:nth-of-type(4) {
+                    display: block;
+                }
+                .select-selected:after {
+                    right: 30px;
+                    top: 29px;
+                    border-top:4px solid $backgroundWhite;
+                    border-right: 4px solid $backgroundWhite;
+                }
+                .select-items div,.select-selected {
+                    padding: 18px 40px 18px 20px;
+                }
+            }
+        }
+    }
+    article:nth-of-type(3) {
+        
+    }
+}

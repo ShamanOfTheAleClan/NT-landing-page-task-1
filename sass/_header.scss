@@ -6,13 +6,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 2;
+    box-shadow: 0 10px 10px rgba(68, 71, 124, 0.02);
     .nav-wrap {
         @include flexRowBetween;
         width: 100%;
+        max-width: 830px;
         height: 71px;
         padding: 21px 20px;
         box-sizing: border-box;
-        box-shadow: 0 10px 10px rgba(68, 71, 124, 0.02);
+        // box-shadow: 0 10px 10px rgba(68, 71, 124, 0.02);
 
         span {
             z-index:2;
