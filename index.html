@@ -34,7 +34,7 @@
             </div>
         </header>
 
-        <article class="pradzia">
+        <article id="pradzia">
             <div class="background-rectangle"></div>
             <h1>Lorem ipsum dolor sit amet conset</h1>
             
@@ -79,154 +79,177 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="swiper-slide">
+                        <div class="item-wrap">
+                            <div class="image news-item"></div>
+                            <div class="text">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            </div>
+                            <div class="read-more-arrow ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34.242" height="23.564"><path d="M33.776 10.656L23.586.466a1.592 1.592 0 1 0-2.252 2.252l7.472 7.472H1.592a1.592 1.592 0 1 0 0 3.184h27.214l-7.472 7.472a1.592 1.592 0 0 0 2.252 2.252l10.19-10.19a1.592 1.592 0 0 0 0-2.252z" fill="#30333c"/></svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </article>
         
-        <article class="pasiulymai">
+        <article id="pasiulymai">
+            <div class="table-wrap">
+                <!-- <div class="background-rectangle"></div> -->
+                <!--su js padaryt, kad paspaudus ant menu ir paspaudus bet kur kitur vietoj pasirinkimo, grįžta default reikšmė-->
+                <div class="select-wrap">   
+                    <div class="custom-select" id="area" style="width:200px;">
+                        <select name="plotas">
+                            <option value="plotas">Plotas</option>
+                            <option value="nuoMaziausio">Nuo mažiausio</option>
+                            <option value="nuoDidziausio">Nuo didžiausio</option>
+                        </select>
+                    </div>
 
-            <!-- <div class="background-rectangle"></div> -->
-            <!--su js padaryt, kad paspaudus ant menu ir paspaudus bet kur kitur vietoj pasirinkimo, grįžta default reikšmė-->
-             
-                <select name="plotas">
-                    <option selected disabled hidden value="default">Plotas</option>
-                    <option value="didejimo">Nuo mažiausio</option>
-                    <option value="mazejimo">Nuo didžiausio</option>
-                </select>
+                    <div class="custom-select" id='room'style="width:300px;">
+                        <select name="kambariu-skaicius">
+                            <option selected disabled hidden value="default">Kambarių skaičius</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option> 
+                        </select>
+                    </div>
 
-                <select name="kambariu-skaicius">
-                    <option selected disabled hidden value="default">Kambarių skaičius</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option> 
-                </select>
+                    <div class="custom-select" id="orientation" style="width:300px;">
+                        <select name="langu-orientacija"> 
+                            <option selected disabled hidden value="default">Langų orientacija</option>
+                            <option value="siaure">Šiaurė</option>
+                            <option value="rytai">Rytai</option>
+                            <option value="pietus">Pietūs</option>
+                            <option value="vakarai">Vakarai</option>
+                        </select>
+                    </div>
 
-                <select name="langu-orientacija"> 
-                    <option selected disabled hidden value="default">Langų orientacija</option>
-                    <option value="siaure">Šiaurė</option>
-                    <option value="rytai">Rytai</option>
-                    <option value="pietus">Pietūs</option>
-                    <option value="vakarai">Vakarai</option>
-                </select>
-
-                <select name="baigtumas">
-                    <option selected disabled hidden  value="default">Baigtumas</option>
-                    <option value="statoma">Statoma</option> 
-                    <option value="pastatyta">Pastatyta</option>
-                </select>
-
-             
-            <table>  
-                <tr>
-                    <th>Nuolaida</th>
-                    <th>Namo nr.</th>
-                    <th>Plotas m2</th>
-                    <th>Kambarių skaičius</th>
-                    <th>Langų orientacija</th>
-                    <th>Baigtumas</th>
-                </tr>
-                <tr>
-                    <td>-5%</td>
-                    <td>1</td>
-                    <td>50.17</td>
-                    <td>3</td>
-                    <td>Pietūs</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-5%</td>
-                    <td>1</td>
-                    <td>60.00</td>
-                    <td>4</td>
-                    <td>Rytai</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>2</td>
-                    <td>35.00</td>
-                    <td>2</td>
-                    <td>Pietūs</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-10%</td>
-                    <td>1</td>
-                    <td>30.00</td>
-                    <td>1</td>
-                    <td>Pietūs</td>
-                    <td>Statoma</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>1</td>
-                    <td>60.00</td>
-                    <td>4</td>
-                    <td>Rytai</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>2</td>
-                    <td>35.00</td>
-                    <td>2</td>
-                    <td>Pietūs</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>1</td>
-                    <td>50.17</td>
-                    <td>3</td>
-                    <td>Pietūs</td>
-                    <td>Statoma</td>
-                </tr>
-                <tr>
-                    <td>-5%</td>
-                    <td>1</td>
-                    <td>60.00</td>
-                    <td>4</td>
-                    <td>Rytai</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-5%</td>
-                    <td>2</td>
-                    <td>35.00</td>
-                    <td>2</td>
-                    <td>Pietūs</td>
-                    <td>Pastatyta</td>
-                </tr>
-                <tr>
-                    <td>-5%</td>
-                    <td>1</td>
-                    <td>50.17</td>
-                    <td>3</td>
-                    <td>Pietūs</td>
-                    <td>Statoma</td>
-                </tr>
-                <tr>
-                    <td>-10%</td>
-                    <td>1</td>
-                    <td>60.00</td>
-                    <td>4</td>
-                    <td>Rytai</td>
-                    <td>Statoma</td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>2</td>
-                    <td>30.00</td>
-                    <td>2</td>
-                    <td>Pietūs</td>
-                    <td>Pastatyta</td>
-                </tr>
-            </table>
+                    <div class="custom-select" id="completion" style="width:222px;">
+                        <select name="baigtumas">
+                            <option selected disabled hidden  value="default">Baigtumas</option>
+                            <option value="statoma">Statoma</option> 
+                            <option value="pastatyta">Pastatyta</option>
+                        </select>
+                    </div>
+                </div>
+                <table id="flats">  
+                    <tr>
+                        <th>Nuolaida</th>
+                        <th>Namo nr.</th>
+                        <th>Plotas m2</th>
+                        <th>Kambarių skaičius</th>
+                        <th>Langų orientacija</th>
+                        <th>Baigtumas</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>-5%</td>
+                            <td>1</td>
+                            <td>50.17</td>
+                            <td>3</td>
+                            <td>Pietūs</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-5%</td>
+                            <td>1</td>
+                            <td>60.00</td>
+                            <td>4</td>
+                            <td>Rytai</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>35.00</td>
+                            <td>2</td>
+                            <td>Pietūs</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-10%</td>
+                            <td>1</td>
+                            <td>30.00</td>
+                            <td>1</td>
+                            <td>Pietūs</td>
+                            <td>Statoma</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>1</td>
+                            <td>60.00</td>
+                            <td>4</td>
+                            <td>Rytai</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>35.00</td>
+                            <td>2</td>
+                            <td>Pietūs</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>1</td>
+                            <td>50.17</td>
+                            <td>3</td>
+                            <td>Pietūs</td>
+                            <td>Statoma</td>
+                        </tr>
+                        <tr>
+                            <td>-5%</td>
+                            <td>1</td>
+                            <td>60.00</td>
+                            <td>4</td>
+                            <td>Rytai</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-5%</td>
+                            <td>2</td>
+                            <td>35.00</td>
+                            <td>2</td>
+                            <td>Pietūs</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                        <tr>
+                            <td>-5%</td>
+                            <td>1</td>
+                            <td>50.17</td>
+                            <td>3</td>
+                            <td>Pietūs</td>
+                            <td>Statoma</td>
+                        </tr>
+                        <tr>
+                            <td>-10%</td>
+                            <td>1</td>
+                            <td>60.00</td>
+                            <td>4</td>
+                            <td>Rytai</td>
+                            <td>Statoma</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>30.00</td>
+                            <td>2</td>
+                            <td>Pietūs</td>
+                            <td>Pastatyta</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </article>
          
-        <article class="naujienos">
+        <article id="naujienos">
             <h1>Naujienos </h1>
             <div class="news-wrap">
                 <div class="news-item"><span>Lorem ipsum dolor sit amet</span></div>
@@ -237,15 +260,17 @@
                 <div class="news-item"><span>Lorem ipsum dolor sit amet</span></div> 
             </div>
             <div class="more-button">
-                <span>Daugiau naujienų</span>
-                <div class="arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="34.242" height="23.564"><path d="M33.776 10.656L23.586.466a1.592 1.592 0 1 0-2.252 2.252l7.472 7.472H1.592a1.592 1.592 0 1 0 0 3.184h27.214l-7.472 7.472a1.592 1.592 0 0 0 2.252 2.252l10.19-10.19a1.592 1.592 0 0 0 0-2.252z" fill="#fff"/></svg>
-                </div>
+                <a href="https://www.15min.lt/tema/nekilnojamas-turtas-3275" target="_blank">
+                    <span>Daugiau naujienų</span>
+                    <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34.242" height="23.564"><path d="M33.776 10.656L23.586.466a1.592 1.592 0 1 0-2.252 2.252l7.472 7.472H1.592a1.592 1.592 0 1 0 0 3.184h27.214l-7.472 7.472a1.592 1.592 0 0 0 2.252 2.252l10.19-10.19a1.592 1.592 0 0 0 0-2.252z" fill="#fff"/></svg>
+                    </div>
+                </a>
             </div>
 
         </article>
 
-        <article class="kontaktai">
+        <article id="kontaktai">
             <div class="contacts">
                 <div class="background-triangle"></div>
 
@@ -287,7 +312,9 @@
                         <input type="text" name="message" placeholder="Žinutė"><br>
                         <input id="terms-checkmark" type="checkbox" name="terms">
                             <label for="terms-checkmark">
-                                <div class="checkbox"></div>
+                                <div class="checkbox">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 611.983 611.983"><path d="M217.625 515.458h-.06c-6.517 0-12.775-2.65-17.379-7.255L7.147 313.77c-9.586-9.646-9.506-25.211.1-34.757 9.706-9.626 25.211-9.526 34.757.1l175.66 176.956L570.021 103.73c9.626-9.606 25.171-9.606 34.757 0 9.606 9.586 9.606 25.151 0 34.757L235.003 508.264a24.59 24.59 0 0 1-17.378 7.194z"/></svg>
+                                </div>
                                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, vel repellat. Ipsum, eveniet <a href="mailto:ntprojects@info.com">ntprojects@info.com</a></span>
                             </label>
                         <div class="button-wrap">

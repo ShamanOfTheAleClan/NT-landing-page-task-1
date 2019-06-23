@@ -29,6 +29,7 @@ article:nth-of-type(4){
             .contact-info {
                 @include flexColumn;
                 align-items: flex-start;
+                line-height: 29px;
                 span:nth-of-type(1){
                     font-family: "QuicksandBold";
                     font-size: 20px;
@@ -78,6 +79,11 @@ article:nth-of-type(4){
                 #terms-checkmark {
                     display: none;
                 }
+                #terms-checkmark:checked + label>.checkbox::after {
+                    width: 0px;
+                    transition: 0.25s ease-in-out;
+                    transform-origin:right;
+                }
                 label {
                     display: flex;
                     flex-direction: row;
@@ -88,6 +94,23 @@ article:nth-of-type(4){
                         border: 1px solid $blueDark;
                         flex-shrink:0;
                         margin-right: 19px;
+                        position: relative;
+                        svg {
+                            opacity: 1;
+                            fill: $grayBlue;
+                            position: relative;
+                            right: -1px;
+                        }
+                        &::after {
+                            display: inline-block;
+                            content:'';
+                            position: absolute;
+                            top: 1px;
+                            right: 1px;
+                            height: 26px;
+                            width: 26px;
+                            background-color: $backgroundWhite;
+                        }
                     }
                 }
                 
@@ -110,6 +133,7 @@ article:nth-of-type(4){
                     @include flexRow;
                     margin: 32px auto;
                     color: $backgroundWhite;
+                    font-size: 20px;
                 }
                 .button-wrap {
                     position: relative;
@@ -121,9 +145,7 @@ article:nth-of-type(4){
                         top:18px;
                     }  
                 }
-
             }
-            
         }
     }
 }
