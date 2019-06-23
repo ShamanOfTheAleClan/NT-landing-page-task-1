@@ -9,20 +9,19 @@ article:nth-of-type(1) {
         font-family: 'QuicksandBold';
         font-size: 50px;
         color: $grayBlue;
-        padding: 0 20px;
         margin-top: 45px;
-        // margin-bottom: 80px;
+        margin-left: 20px;
         position: relative;
         max-width: 473px;
     }
     .background-rectangle {
         background-color: $backgroundWhite;
         height: 100%;
-        width: 70%;
+        width: 60%;
         border-radius: 344px 0 0 0;
         position: absolute;
         top: 118px;
-        left: 30%; 
+        left: 40%; 
     }
     .item-wrap {
         display: inline-block;

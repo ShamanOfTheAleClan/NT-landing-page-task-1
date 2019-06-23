@@ -10,12 +10,11 @@ header {
     .nav-wrap {
         @include flexRowBetween;
         width: 100%;
-        max-width: 830px;
+        max-width: 1330px;
         height: 71px;
         padding: 21px 20px;
         box-sizing: border-box;
-        // box-shadow: 0 10px 10px rgba(68, 71, 124, 0.02);
-
+        margin: 0 auto;
         span {
             z-index:2;
             font-size: 22px;

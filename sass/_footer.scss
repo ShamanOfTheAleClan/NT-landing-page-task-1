@@ -5,6 +5,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
     .apie-statytoja, .saugumas {
         display: flex;
         flex-direction: column;

@@ -84,6 +84,7 @@ article:nth-of-type(2) {
                 font-size: 14px;
                 color: $grayBlueLight;
                 padding: 20px 5px 20px 10px;
+                width: 16.6%;
             }
 
             td:nth-of-type(4){
@@ -94,6 +95,7 @@ article:nth-of-type(2) {
         .select-wrap {
             padding-top: 48px;
             @include flexColumn;
+            width: 100%;
             /* The container must be positioned relative: */
             .custom-select {
                 position: relative;

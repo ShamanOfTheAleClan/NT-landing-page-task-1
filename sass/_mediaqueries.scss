@@ -13,11 +13,16 @@
     }
 }
 @media (min-width: 425px) {
+    article:nth-of-type(1){
+        h1 {
+            margin-left: 10vw;
+        }
+    }
     article:nth-of-type(2) {
         .table-wrap {
             table {
                 th {
-                    padding: 52px 10px;
+                    padding-right: calc(100% / 10 - 68px);
                 }
                 tr {
                     td:first-of-type, th:first-of-type {
@@ -26,7 +31,7 @@
                     td:last-of-type, th:last-of-type {
                         padding-right: 20px;
                     }
-                    td:nth-of-type(5), th:nth-of-type(5) {
+                    td:nth-of-type(5){
                         padding-right: 20px;
                     }
                 }
@@ -87,9 +92,6 @@
                         bottom: -3px;
                         transition: 0.3s ease-in-out;
                     } 
-                    a {
-                        // padding: 0 22px;
-                    }
                 }
                 li:hover{
                     border-left: none;
@@ -128,25 +130,6 @@
                 bottom:26px;
             }
         }
-        // .background-filter {
-        //     pointer-events: none;
-        //     width: 267px;
-        //     height: 92%;
-        //     // background-color: #000;
-        //     position: absolute;
-        //     right: 0;
-        //     top: 130px;
-        //     z-index: 2;
-        //     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
-        // }
-        // .swiper-slide-next:after {
-        //     height: 100%;
-        //     width: 200px;
-        //     background-color: black;
-        //     position:absolute;
-        //     right: 0;
-        //     top: 0;
-        // }
     }
     article:nth-of-type(2) {
         .table-wrap {
@@ -160,9 +143,6 @@
                 tr {
                     td:nth-of-type(6), th:nth-of-type(6) {
                         display: table-cell;
-                    }
-                    td:nth-of-type(5), th:nth-of-type(5) {
-                        padding-right: 10px;
                     }
                 }
             }
@@ -187,6 +167,9 @@
         }
     }
     article:nth-of-type(3) {
+        h1 {
+            margin-left: 93px;
+        }
         .news-wrap {
             .news-item {
                 max-height: 380px;
@@ -204,7 +187,7 @@
             position: relative;
             overflow:hidden;
             box-sizing: border-box;
-            // z-index:10;
+            align-items: flex-start;
             .contact-single {
                 overflow:visible;
                 z-index:1;
@@ -231,12 +214,11 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                // overflow:visible;
-                // z-index:5;
             }
         }
         .form-wrap {
             width: 50%;
+            padding-left: 43px;
             form {
                 fieldset {
                     span {
@@ -245,13 +227,16 @@
                     input {
                         font-size: 20px;
                     }
+                    .button-wrap {
+                        margin-left: 0;
+                    }
                 }
             }
             h1 {
                 font-size: 50px;
             }
             input {
-                width: 90%;
+                width: 80%;
             }
         }
     }
@@ -269,6 +254,49 @@
         }
         .social {
             align-items: flex-end;
+            margin: 0;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    header {
+        .nav-wrap {
+            padding: 21px 50px;
+        }
+    }
+    article:nth-of-type(2) {
+        .table-wrap {
+            table {
+                tr {
+                    td:first-of-type, th:first-of-type {
+                        padding-left: 45px;
+                    }
+                    td:last-of-type, th:last-of-type {
+                        padding-right: 45px;
+                    }
+                }
+            }
+            .select-wrap {
+                flex-wrap: nowrap;
+                .custom-select {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    article:nth-of-type(4){
+        .contacts {
+            padding-left: 74px;
+        }
+    }
+    footer {
+        padding:32px 85px 40px 100px;
+    }
+}
+@media (min-width: 1440px) {
+    article:nth-of-type(1) {
+        h1 {
+            margin-left: 92px;
         }
     }
 }
