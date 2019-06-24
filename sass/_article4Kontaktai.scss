@@ -56,6 +56,7 @@ article:nth-of-type(4){
     }
     .form-wrap {
         padding: 50px 20px 32px 20px;
+        overflow:hidden;
         // box-shadow: 0 10px 50px rgba(68, 71, 124, 0.15);
         h1 {
             font-family: "QuicksandBold";
@@ -67,6 +68,20 @@ article:nth-of-type(4){
         form {
             fieldset {
                 border: none;
+                .error {
+                    border-color: #E36464;
+                }
+                .error-message {
+                    font-family: "MontserratMedium";
+                    font-size: 14px;
+                    color: #E36464;
+                    margin-bottom: -21px;
+                    margin-top: 6px;
+                    padding-left: 4px;
+                }
+                #bouncer-error_terms_on {
+                    padding-left: 54px;
+                }
                 input {
                     outline: none;
                     border: none;
@@ -74,23 +89,27 @@ article:nth-of-type(4){
                     font-family: 'MontserratMedium';
                     font-size: 16px;
                     color: $grayBlueLight;
-                    margin-bottom: 30px;
+                    margin-top: 21px;
                     padding: 4px;
-                    
+                    width: 80%;
                 }
-                #terms-checkmark {
+                #checkbox-1 {
                     display: none;
                 }
-                #terms-checkmark:checked + label>.checkbox::after {
-                    width: 0px;
-                    transition: 0.25s ease-in-out;
-                    transform-origin:right;
+                #checkbox-1:checked + label>.checkbox::before {
+                    height: 18px;
+                    width: 18px;
+                    bottom: 5px;
+                    left: 5px;
+                    transition: 0.2s ease-in-out;
                 }
 
                 label {
                     display: flex;
                     flex-direction: row;
-                    align-items: top;
+                    align-items: flex-start;
+                    margin-top: 30px;
+                    padding-left: 4px;
                     .checkbox {
                         width: 28px;
                         height: 28px;
@@ -104,15 +123,14 @@ article:nth-of-type(4){
                             position: relative;
                             right: -1px;
                         }
-                        &::after {
-                            display: inline-block;
-                            content:'';
+                        &::before {
+                            content: '';
+                            height: 0px;
+                            width: 0px;
+                            bottom: 14px;
+                            left: 14px;
+                            background-color: $checkmarkBlue;
                             position: absolute;
-                            top: 1px;
-                            right: 1px;
-                            height: 26px;
-                            width: 26px;
-                            background-color: $backgroundWhite;
                         }
                     }
                 }
@@ -126,11 +144,13 @@ article:nth-of-type(4){
                         color: $grayBlueLight;
                     }
                 }
-                #terms-checkmark:checked ~ .button-wrap>input[type=submit] {
-                    opacity: 1;
+                #checkbox-1:checked ~ .button-wrap::after {
+                    // opacity: 1;
+                    width: 0;
+                    // height: 0;
                 }
                 input[type=submit] {
-                    opacity:0.2;
+                    // opacity:0.2;
                     width: 200px;
                     height: 60px;
                     border-radius: 30px;
@@ -142,11 +162,25 @@ article:nth-of-type(4){
                     margin: 32px auto;
                     color: $backgroundWhite;
                     font-size: 20px;
+                    cursor: pointer;
                 }
                 .button-wrap {
                     position: relative;
                     width: 200px;
                     margin: 0 auto;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        height: 110%;
+                        width: 110%;
+                        top: -2px;
+                        right: -2px;
+                        opacity:0.8;
+                        background-color: $backgroundWhite;
+                        transition: 0.15s ease-in-out;
+                        transition-delay: 0.1s;
+                        border-radius: 30px;
+                    }
                     svg {
                         position: absolute;
                         right: calc(50% - 55px);
