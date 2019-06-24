@@ -348,8 +348,57 @@
         </footer>
     </main>
     <script src="script.js"></script>
+    <script data-name="burger-animation">
+        let burger = document.getElementById("burger");
+        let menu = document.querySelector(".menu-wrap");
+        function burgerClick()  {
+            if (burger.classList.contains('active')) {
+                burger.classList.remove('active');
+                menu.classList.remove('translated');
+                }
+                else {
+                burger.classList.add('active');
+                menu.classList.add('translated');
+                }
+            }
+        burger.addEventListener('click', burgerClick) ;
+    </script>
+    <script data-name="random-photo-api">
+        let url = 'https://api.unsplash.com/photos/?count=20&client_id=0e489bafc809bbb304de7230134f1a22096c706a20c0fa9537ddb7cb982c4543';
+        let data;
+        let imgUrlArray = [];
+        let http = new XMLHttpRequest();
+        window.onload=function() {
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    data = JSON.parse(http.response);
+                    for (i=0; i < data.length; i++) {
+                        let imgUrl = data[i].urls.small;
+                        imgUrlArray.push(imgUrl);
+                    }
+                }
+            };
+            http.open("GET", url);
+            http.send();
+        };
+        let images = document.querySelectorAll('.news-item');
+        http.onload = function () {
+            for (i=0; i < images.length; i++) {
+                let cssUrl = imgUrlArray[i];
+                images[i].style.backgroundImage = 'url("'+cssUrl+'")';
+            }
+        }
+    </script>
+    <script data-name="highlight-discounts">
+        let rows = document.querySelectorAll('tr');
+        for (i=1; i < rows.length; i++) {
+            if (rows[i].querySelector("td").innerHTML !== "-") {
+                rows[i].classList.add("discount")
+            }
+        }
+    </script>
     <script src="swiper.min.js"></script>
-    <script>
+    <script data-name="swiper-tweaks">
         let swiper1 = new Swiper('.swiper1', {
             centeredSlides: true,
             slidesPerView: 1,
@@ -378,5 +427,7 @@
             }
         });
     </script>
+    <script src="customDropDowns.min.js"></script>
+    <script src="tableSort.min.js"></script>
 </body>
 </html>
