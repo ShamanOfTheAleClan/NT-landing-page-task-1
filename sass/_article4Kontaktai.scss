@@ -172,6 +172,7 @@ article:nth-of-type(4){
                         position: absolute;
                         right: calc(50% - 55px);
                         top:18px;
+                        pointer-events: none;
                     }  
                 }
             }
