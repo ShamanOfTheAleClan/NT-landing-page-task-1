@@ -2,19 +2,12 @@ article:nth-of-type(4){
     box-shadow: 0 10px 50px rgba(68, 71, 124, 0.15);
     border-radius: 7px;
     margin: 70px 0 42px 0;
-
     .contacts{
         background-color: $blueLight;
         width: 100%;
         padding: 110px 20px 110px 20px;
         box-sizing: border-box;
         @include flexColumn;
-        // .background-triangle {
-        //     width: 0;
-        //     height: 0;
-        //     border-bottom: 50px solid $backgroundWhite;
-        //     border-left: 772px solid transparent;
-        // }
         .contact-single {
             @include flexRow;
             align-items: center;
@@ -57,7 +50,6 @@ article:nth-of-type(4){
     .form-wrap {
         padding: 50px 20px 32px 20px;
         overflow:hidden;
-        // box-shadow: 0 10px 50px rgba(68, 71, 124, 0.15);
         h1 {
             font-family: "QuicksandBold";
             font-size: 42px;
@@ -103,7 +95,6 @@ article:nth-of-type(4){
                     left: 5px;
                     transition: 0.2s ease-in-out;
                 }
-
                 label {
                     display: flex;
                     flex-direction: row;
@@ -134,7 +125,6 @@ article:nth-of-type(4){
                         }
                     }
                 }
-                
                 span {
                     font-family: 'MontserratMedium';
                     font-size: 14px;
@@ -145,12 +135,9 @@ article:nth-of-type(4){
                     }
                 }
                 #checkbox-1:checked ~ .button-wrap::after {
-                    // opacity: 1;
                     width: 0;
-                    // height: 0;
                 }
                 input[type=submit] {
-                    // opacity:0.2;
                     width: 200px;
                     height: 60px;
                     border-radius: 30px;

@@ -58,7 +58,6 @@ header {
     .translated {
         transform: translateX(0px);
     }
-
     .burger {
         box-sizing: border-box;
         @include flexCenter;
